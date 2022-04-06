@@ -17,5 +17,19 @@
 	"bugs": {
 		"url": "https://github.com/georgestav/portfolio-personal/issues"
 	},
-	"homepage": "https://github.com/georgestav/portfolio-personal#readme"
+	"homepage": "https://github.com/georgestav/portfolio-personal#readme",
+	"dependencies": {
+		"cookie-parser": "~1.4.4",
+		"debug": "~2.6.9",
+		"dotenv": "^16.0.0",
+		"express": "~4.16.1",
+		"http-errors": "~1.6.3",
+		"jade": "~1.11.0",
+		"morgan": "~1.9.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15",
+		"webpack": "^5.71.0",
+		"webpack-cli": "^4.9.2"
+	}
 }
