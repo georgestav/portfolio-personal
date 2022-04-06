@@ -1,47 +1,47 @@
 .custom--button {
-	align-items: center;
-	background-color: var(--main-theme);
-	border: 0;
-	border-radius: 100px;
-	box-sizing: border-box;
-	color: var(--main-white);
-	cursor: pointer;
-	display: inline-flex;
-	font-size: 16px;
-	font-weight: 600;
-	justify-content: center;
-	line-height: 20px;
-	max-width: 480px;
-	min-height: 40px;
-	min-width: 0px;
-	overflow: hidden;
-	padding: 0px;
-	padding-left: 20px;
-	padding-right: 20px;
-	text-align: center;
-	touch-action: manipulation;
-	transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
-		color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-	user-select: none;
-	-webkit-user-select: none;
-	vertical-align: middle;
-	text-decoration: none;
+  align-items: center;
+  background-color: var(--main-theme);
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: var(--main-white);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  text-decoration: none;
 }
 
 .custom--button:hover,
 .custom--button:focus {
-	background-color: var(--secondary-bg);
-	color: var(--main-white);
+  background-color: var(--secondary-bg);
+  color: var(--main-white);
 }
 
 .custom--button:active {
-	background: var(--active-bg);
-	color: var(--main-light-gray);
+  background: var(--active-bg);
+  color: var(--main-light-gray);
 }
 
 .custom--button:disabled {
-	cursor: not-allowed;
-	background: var(--main-dark-gray);
-	color: var(--main-text-gray);
+  cursor: not-allowed;
+  background: var(--main-dark-gray);
+  color: var(--main-text-gray);
 }
