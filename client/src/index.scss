@@ -1,32 +1,32 @@
 :root {
-    --active-bg: #09223b;
-    --custom-text-light-gray: #ccc;
-    --main-theme: #1b8dda;
-    --main-white: #fff;
-    --main-light-gray: #ebebeb;
-    --main-text-gray: #444;
-    --main-dark-gray: #232323;
-    --secondary-bg: #16437e;
+  --active-bg: #09223b;
+  --custom-text-light-gray: #ccc;
+  --main-theme: #1b8dda;
+  --main-white: #fff;
+  --main-light-gray: #ebebeb;
+  --main-text-gray: #444;
+  --main-dark-gray: #232323;
+  --secondary-bg: #16437e;
 }
 
 html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 *,
 *:after,
 *:before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-        "Helvetica Neue", sans-serif;
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @import "./styles/button";

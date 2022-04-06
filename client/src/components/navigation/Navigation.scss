@@ -1,44 +1,44 @@
 .logo {
-    color: var(--main-light-gray);
-    font-size: 1.55rem;
-    font-family: monospace;
-    font-weight: bolder;
-    padding: 0 1rem;
+  color: var(--main-light-gray);
+  font-size: 1.55rem;
+  font-family: monospace;
+  font-weight: bolder;
+  padding: 0 1rem;
 }
 .logo::after {
-    animation: blink 1.2s linear infinite;
-    content: "_";
+  animation: blink 1.2s linear infinite;
+  content: "_";
 }
 @keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .header__links__container {
-    align-items: center;
-    display: flex;
-    flex-wrap: nowrap;
-    position: relative;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
 }
 .header__links__container a {
-    color: var(--main-light-gray);
-    text-decoration: none;
+  color: var(--main-light-gray);
+  text-decoration: none;
 }
 .header__links__container a:hover {
-    background-color: var(--main-theme);
-    color: var(--main-dark-gray);
-    transition: 0.3s ease-in-out;
+  background-color: var(--main-theme);
+  color: var(--main-dark-gray);
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 900px) {
-    .header__links__container {
-        display: none;
-    }
+  .header__links__container {
+    display: none;
+  }
 }

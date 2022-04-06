@@ -1,31 +1,46 @@
 /* find me here section */
 
 .networks__section {
-    align-items: center;
-    background-color: var(--main-dark-gray);
-    display: flex;
-    flex-direction: column;
-    margin-top: 5%;
-    padding: 5% 0;
+  align-items: center;
+  background-color: var(--main-dark-gray);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+  padding: 5% 0;
 }
 
 .networks__title {
-    font-size: 2em;
+  font-size: 2em;
 }
 
 .fab__icons {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 5%;
-    width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  width: 50%;
 }
 
 .fab {
-    color: var(--main-light-gray);
-    font-size: 8em;
+  color: var(--main-light-gray);
+  font-size: 8em;
 }
 
 .fab:hover {
-    color: var(--main-theme);
-    transition: 0.3s ease-in-out;
+  color: var(--main-theme);
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 425px) {
+  .fab__icons {
+    gap: 0.5em;
+    .fab {
+      font-size: 6em;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .fab {
+    font-size: 4em;
+  }
 }

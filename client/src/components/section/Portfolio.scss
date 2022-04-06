@@ -1,62 +1,62 @@
 /* My portfolio section */
 
 .portfolio__section {
-    align-items: center;
-    background-color: var(--main-theme);
-    display: flex;
-    flex-direction: column;
-    padding: 5% 10%;
+  align-items: center;
+  background-color: var(--main-theme);
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
 }
 
 .portfolio__title {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 .portfolio__projects__container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    margin-top: 5%;
-    row-gap: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-top: 5%;
+  row-gap: 1em;
 }
 
 .project__container {
-    align-items: center;
-    background-color: var(--main-light-gray);
-    border: 8px var(--main-white) solid;
-    display: flex;
-    flex-direction: column;
+  align-items: center;
+  background-color: var(--main-light-gray);
+  border: 8px var(--main-white) solid;
+  display: flex;
+  flex-direction: column;
 }
 
 .project__image {
-    border-bottom: 5px var(--main-white) solid;
+  border-bottom: 5px var(--main-white) solid;
 }
 
 .project__description__text {
-    padding: 2%;
-    width: 300px;
+  padding: 2%;
+  width: 300px;
 }
 
 .project__description__tech-stack {
-    padding: 2%;
+  padding: 2%;
 }
 
 .project--final {
-    border: 8px var(--main-dark-gray) solid;
+  border: 8px var(--main-dark-gray) solid;
 }
 
 .project__image--final {
-    border-bottom: 5px var(--main-dark-gray) solid;
+  border-bottom: 5px var(--main-dark-gray) solid;
 }
 
 .project__container:hover {
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 .find__more {
-    display: flex;
-    justify-content: flex-end;
-    padding: 0.5rem;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
 }
