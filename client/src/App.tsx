@@ -13,7 +13,6 @@ function App() {
 			.then((res) => res.json())
 			.then((data) => setData(data.message));
 	}, []);
-	console.log("api", data);
 	return (
 		<Fragment>
 			<Header />
