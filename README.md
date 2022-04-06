@@ -9,7 +9,7 @@
 </div>
 <br/>
 
-> Keep in mind its testing environment under constant update
+> Keep in mind it is a testing environment under constant update!
 
 ## What's going on here?
 
