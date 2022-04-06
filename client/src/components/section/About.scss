@@ -1,0 +1,45 @@
+/* About me section */
+
+.about__section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+}
+
+.about__title {
+	margin-top: 5%;
+	font-size: 2.5em;
+	color: var(--main-dark-gray);
+}
+
+.about__description {
+	margin: 0 20%;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	justify-content: center;
+}
+
+.about__image {
+	width: 49%;
+	height: 49%;
+	border-radius: 50%;
+}
+
+.about__bio {
+	width: 49%;
+	font-size: 1.1em;
+}
+.about__cta {
+	text-align: center;
+}
+.about__underline {
+	border-bottom: solid 5px var(--main-theme);
+}
+
+@media screen and (max-width: 1200px) {
+	.about__description {
+		flex-wrap: wrap;
+	}
+}

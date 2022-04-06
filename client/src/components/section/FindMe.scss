@@ -1,0 +1,31 @@
+/* find me here section */
+
+.networks__section {
+	padding: 5% 0;
+	margin-top: 5%;
+	background-color: var(--main-dark-gray);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.networks__title {
+	font-size: 2em;
+}
+
+.fab__icons {
+	margin-top: 5%;
+	width: 50%;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.fab {
+	color: var(--main-light-gray);
+	font-size: 8em;
+}
+
+.fab:hover {
+	transition: 0.3s ease-in-out;
+	color: var(--main-theme);
+}
