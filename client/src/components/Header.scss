@@ -4,33 +4,6 @@ header {
     height: 100vh;
     justify-content: space-between;
 }
-.header__logo__nav {
-    display: flex;
-    justify-content: space-between;
-}
-
-.logo {
-    color: var(--main-text-gray);
-    font-size: 2.5em;
-    font-family: monospace;
-    font-weight: bolder;
-    padding: 0 0.25em;
-}
-.logo::after {
-    animation: blink 1.2s linear infinite;
-    content: "_";
-}
-@keyframes blink {
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-    }
-}
 
 .header__container {
     position: relative;

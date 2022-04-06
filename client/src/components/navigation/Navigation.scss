@@ -1,3 +1,26 @@
+.logo {
+    color: var(--main-light-gray);
+    font-size: 1.55rem;
+    font-family: monospace;
+    font-weight: bolder;
+    padding: 0 1rem;
+}
+.logo::after {
+    animation: blink 1.2s linear infinite;
+    content: "_";
+}
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .header__links__container {
     align-items: center;
     display: flex;
@@ -5,9 +28,7 @@
     position: relative;
 }
 .header__links__container a {
-    background-color: var(--main-text-gray);
     color: var(--main-light-gray);
-    padding: 1em 3em;
     text-decoration: none;
 }
 .header__links__container a:hover {
