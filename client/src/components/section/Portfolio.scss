@@ -29,11 +29,12 @@
 
 .project__image {
   border-bottom: 5px var(--main-white) solid;
+  width: 100%;
 }
 
 .project__description__text {
   padding: 2%;
-  width: 300px;
+  width: 15rem;
 }
 
 .project__description__tech-stack {

@@ -1,21 +1,22 @@
 {
-	"name": "portfolio",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server/server.js",
-	"scripts": {
-		"start": "cd server && npm install && node server.js",
-		"build": "cd client && npm install && npm run build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/georgestav/portfolio-personal.git"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/georgestav/portfolio-personal/issues"
-	},
-	"homepage": "https://github.com/georgestav/portfolio-personal#readme"
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "cd server && npm install && node server.js",
+    "build": "cd client && npm install && npm run build",
+    "dev": "cd server && nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgestav/portfolio-personal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgestav/portfolio-personal/issues"
+  },
+  "homepage": "https://github.com/georgestav/portfolio-personal#readme"
 }
