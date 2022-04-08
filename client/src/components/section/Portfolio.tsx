@@ -143,8 +143,8 @@ function Portfolio() {
             <div className="project__description__text">
               <h5>Store It</h5>
               <p>
-                Full stack original project, social economy airBnB like MVP for
-                storage space near you or your desired location.
+                Full stack original project, social economy MVP for storage
+                space near you or your desired location.
               </p>
             </div>
             <h4 className="project__description__tech-stack">
