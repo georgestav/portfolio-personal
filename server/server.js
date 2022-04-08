@@ -1,5 +1,5 @@
 require("dotenv").config(); // read env
-require("./database/connection.js"); // connect to db
+// require("./database/connection.js"); // connect to db
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
