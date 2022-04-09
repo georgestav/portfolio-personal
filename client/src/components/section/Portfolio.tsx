@@ -30,7 +30,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                Explore
               </a>
             </div>
           </div>
@@ -62,7 +62,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                Explore
               </a>
             </div>
           </div>
@@ -94,7 +94,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                Explore
               </a>
             </div>
           </div>
@@ -126,7 +126,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                Explore
               </a>
             </div>
           </div>
@@ -187,7 +187,7 @@ function Portfolio() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                Explore
               </a>
             </div>
           </div>
