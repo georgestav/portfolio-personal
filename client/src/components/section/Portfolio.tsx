@@ -18,9 +18,9 @@ function Portfolio() {
                 <li>Migration from Joomla CMS to Wordpress CMS</li>
               </ul>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: HTML, CSS, Joomla, Wordpress
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
@@ -43,9 +43,9 @@ function Portfolio() {
                 404 or 500 pages!
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: HTML, CSS, Javascript
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
@@ -68,9 +68,9 @@ function Portfolio() {
                 ES2022.
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: HTML, CSS, Javascript, OOP
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
@@ -93,9 +93,9 @@ function Portfolio() {
                 or running to the local storage.
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: HTML, CSS, Javascript, API consumer, OOP
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
@@ -118,9 +118,9 @@ function Portfolio() {
                 on Authentication and Authorisation of registered users.
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: PHP, MySQL, HTML, CSS, Javascript, Bootstrap 5
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
@@ -147,13 +147,42 @@ function Portfolio() {
                 space near you or your desired location.
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: Laravel, ReactJS, CSS, Webpack, MySQL
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
                 href="https://storeit.codeboot.cz/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Eplore
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="project__container">
+          <img
+            className="project__image"
+            src="./img/real_estates_component.jpg"
+            alt=""
+          />
+          <div className="project__description__tag">
+            <div className="project__description__text">
+              <h5>Real Estate Comparison</h5>
+              <p>
+                A React JS component, comparing two selected estates, fetched
+                from an API using axios
+              </p>
+            </div>
+            <h6 className="project__description__tech-stack">
+              Tech Stack: React, Api, Axios
+            </h6>
+            <div className="find__more">
+              <a
+                className="custom--button"
+                href="https://github.com/georgestav/case_study_react"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -172,9 +201,9 @@ function Portfolio() {
                 in development.
               </p>
             </div>
-            <h4 className="project__description__tech-stack">
+            <h6 className="project__description__tech-stack">
               Tech Stack: React Typescript, NodeJS, Express, MongoDB
-            </h4>
+            </h6>
             <div className="find__more">
               <a
                 className="custom--button"
