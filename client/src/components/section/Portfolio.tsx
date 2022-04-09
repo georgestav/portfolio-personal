@@ -34,7 +34,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="project__container">
-          <img className="project__image" src="./img/106-300x200.jpg" alt="" />
+          <img className="project__image" src="./img/pig_game.jpg" alt="" />
           <div className="project__description__tag">
             <div className="project__description__text">
               <h5>Vanilla Javascript browser game</h5>
@@ -59,7 +59,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="project__container">
-          <img className="project__image" src="./img/385-300x200.jpg" alt="" />
+          <img className="project__image" src="./img/bankist.jpg" alt="" />
           <div className="project__description__tag">
             <div className="project__description__text">
               <h5>Bank App Project</h5>
@@ -69,7 +69,7 @@ function Portfolio() {
               </p>
             </div>
             <h6 className="project__description__tech-stack">
-              Tech Stack: HTML, CSS, Javascript, OOP
+              Tech Stack: HTML, CSS, Javascript, ES21
             </h6>
             <div className="find__more">
               <a
@@ -84,7 +84,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="project__container">
-          <img className="project__image" src="./img/588-300x200.jpg" alt="" />
+          <img className="project__image" src="./img/mapty.jpg" alt="" />
           <div className="project__description__tag">
             <div className="project__description__text">
               <h5>Mapty - Map your Workout</h5>
@@ -94,7 +94,7 @@ function Portfolio() {
               </p>
             </div>
             <h6 className="project__description__tech-stack">
-              Tech Stack: HTML, CSS, Javascript, API consumer, OOP
+              Tech Stack: HTML, CSS, Javascript, API consumer, OOP, ES21, ES22
             </h6>
             <div className="find__more">
               <a
@@ -109,7 +109,7 @@ function Portfolio() {
           </div>
         </div>
         <div className="project__container">
-          <img className="project__image" src="./img/639-300x200.jpg" alt="" />
+          <img className="project__image" src="./img/cms.jpg" alt="" />
           <div className="project__description__tag">
             <div className="project__description__text">
               <h5>PHP - CMS</h5>
@@ -136,7 +136,7 @@ function Portfolio() {
         <div className="project__container project--final">
           <img
             className="project__image project__image--final"
-            src="./img/947-300x200.jpg"
+            src="./img/storeit.jpg"
             alt=""
           />
           <div className="project__description__tag">
