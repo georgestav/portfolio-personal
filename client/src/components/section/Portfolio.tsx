@@ -1,4 +1,6 @@
 import "./Portfolio.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 function Portfolio() {
   return (
@@ -48,8 +50,15 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
+                href="https://github.com/georgestav/pig_game/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} className="code" />
+              </a>
+              <a
                 className="custom--button"
-                href="https://github.com/georgestav"
+                href="https://georgestav.github.io/pig_game/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -73,8 +82,15 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
+                href="https://github.com/georgestav/bankist/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} className="code" />
+              </a>
+              <a
                 className="custom--button"
-                href="https://github.com/georgestav"
+                href="https://georgestav.github.io/bankist/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -98,8 +114,15 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
+                href="https://github.com/georgestav/mapty/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} className="code" />
+              </a>
+              <a
                 className="custom--button"
-                href="https://github.com/georgestav"
+                href="https://georgestav.github.io/mapty/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -114,8 +137,9 @@ function Portfolio() {
             <div className="project__description__text">
               <h5>PHP - CMS</h5>
               <p>
-                Vanilla PHP content management system for blog posts, focusing
-                on Authentication and Authorisation of registered users.
+                Full stack Vanilla PHP content management system for blog posts,
+                focusing on Authentication and Authorisation of registered
+                users. Post, Comment, category management.
               </p>
             </div>
             <h6 className="project__description__tech-stack">
@@ -123,12 +147,11 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
-                className="custom--button"
                 href="https://github.com/georgestav/cms"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                <FontAwesomeIcon icon={faGithub} className="code" />
               </a>
             </div>
           </div>
@@ -152,6 +175,13 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
+                href="https://github.com/georgestav/store-it/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faGithub} className="code" />
+              </a>
+              <a
                 className="custom--button"
                 href="https://storeit.codeboot.cz/"
                 target="_blank"
@@ -172,8 +202,8 @@ function Portfolio() {
             <div className="project__description__text">
               <h5>Real Estate Comparison</h5>
               <p>
-                A React JS component, comparing two selected estates, fetched
-                from an API using axios
+                React JS component, comparing two selected estates, fetched from
+                an API using axios
               </p>
             </div>
             <h6 className="project__description__tech-stack">
@@ -181,12 +211,11 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
-                className="custom--button"
-                href="https://github.com/georgestav/case_study_react"
+                href="https://github.com/georgestav/case_study_react/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                <FontAwesomeIcon icon={faGithub} className="code" />
               </a>
             </div>
           </div>
@@ -197,8 +226,8 @@ function Portfolio() {
             <div className="project__description__text">
               <h5>Porfolio</h5>
               <p>
-                This website,CMS portfolio using Typescript react using MongoDB,
-                in development.
+                Full stack website,CMS portfolio using Typescript react using
+                MongoDB, in development.
               </p>
             </div>
             <h6 className="project__description__tech-stack">
@@ -206,12 +235,11 @@ function Portfolio() {
             </h6>
             <div className="find__more">
               <a
-                className="custom--button"
-                href="https://github.com/georgestav"
+                href="https://github.com/georgestav/portfolio-personal"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Eplore
+                <FontAwesomeIcon icon={faGithub} className="code" />
               </a>
             </div>
           </div>
