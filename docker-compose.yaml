@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  database:
+    image: mongo
+    volumes:
+      - data_portfolio:/data/db
+    env_file:
+      - ./config/config.env
+  server:
+    build: ./server
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    env_file:
+      - ./config/config.env
+    ports:
+      - 3000:80
+    depends_on:
+      - database
+volumes:
+  data_portfolio:

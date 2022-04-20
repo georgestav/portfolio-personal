@@ -1,0 +1,14 @@
+import { json } from 'body-parser';
+import express, { NextFunction, Request, Response } from 'express';
+
+import postsRoutes from './routes/api/posts';
+
+const app = express();
+app.use(json());
+app.use("/api/posts", postsRoutes);
+
+app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
+  res.status(500).json({ message: err.message });
+});
+
+app.listen(80);
