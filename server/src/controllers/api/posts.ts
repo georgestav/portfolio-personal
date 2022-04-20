@@ -9,7 +9,7 @@ export const createPost: RequestHandler = (req, res, next) => {
   const newPost = new Post(Math.random().toString(), "test post");
 
   POSTS.push(newPost);
-  console.log("POSTS!!!!!!");
+  console.log("POSTS!!!");
 
   res.status(201).json({ message: "Created Post", createdPost: newPost });
 };
