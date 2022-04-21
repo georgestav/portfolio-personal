@@ -1,15 +1,26 @@
 import { Router } from 'express';
 
-import { createPost } from '../../controllers/api/posts';
+import {
+    createPost,
+    deleteAllPosts,
+    deletePostId,
+    getPosts,
+    getPublishedPosts,
+    updatePostId,
+} from '../../controllers/api/posts';
 
 const router = Router();
 
 router.post("/", createPost);
 
-router.get("/");
+router.get("/all", getPosts);
 
-router.patch("/:id");
+router.get("/published", getPublishedPosts);
 
-router.delete("/:id");
+router.patch("/:id", updatePostId);
+
+router.delete("/all", deleteAllPosts);
+
+router.delete("/:id", deletePostId);
 
 export default router;
