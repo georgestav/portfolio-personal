@@ -5,6 +5,7 @@ import {
     deleteAllPosts,
     deletePostId,
     getPosts,
+    getPostsByAuthor,
     getPublishedPosts,
     updatePostId,
 } from '../../controllers/api/posts';
@@ -16,6 +17,8 @@ router.post("/", createPost);
 router.get("/all", getPosts);
 
 router.get("/published", getPublishedPosts);
+
+router.get("/:author/:published?", getPostsByAuthor);
 
 router.patch("/:id", updatePostId);
 

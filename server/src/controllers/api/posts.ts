@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 
 import { PostModel } from '../../models/Post';
-import { IDeletedPost, IFetchedPosts, IPost } from '../../types/interfaces';
+import { IDeletedPost, IFetchedPosts, IPost, IPostOptional } from '../../types/interfaces';
 
 /**
  * Create a post
@@ -10,16 +10,20 @@ import { IDeletedPost, IFetchedPosts, IPost } from '../../types/interfaces';
  * @returns object
  */
 export const createPost: RequestHandler = (req, res, next) => {
-  const createPost = new PostModel<IPost>({
-    title: req.body.title,
-    author: req.body.author,
-    body: req.body.body,
-    published: req.body.published,
-    votes: req.body.votes,
-    tags: req.body.tags,
-  });
-  createPost.save();
-  res.status(201).json({ message: "Created Post", createdPost: createPost });
+  try {
+    const createPost = new PostModel<IPost>({
+      title: req.body.title,
+      author: req.body.author,
+      body: req.body.body,
+      published: req.body.published,
+      votes: req.body.votes,
+      tags: req.body.tags,
+    });
+    createPost.save();
+    res.status(201).json({ message: "Created Post", createdPost: createPost });
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**
@@ -29,24 +33,33 @@ export const createPost: RequestHandler = (req, res, next) => {
  * @returns object
  */
 export const updatePostId: RequestHandler = async (req, res, next) => {
-  const updatePost: IPost = {
-    title: req.body.title,
-    author: req.body.author,
-    body: req.body.body,
-    published: req.body.published,
-    votes: req.body.votes,
-    tags: req.body.tags,
-  };
+  try {
+    const updatePost: IPost = {
+      title: req.body.title,
+      author: req.body.author,
+      body: req.body.body,
+      published: req.body.published,
+      votes: req.body.votes,
+      tags: req.body.tags,
+    };
 
-  const options = { returnDocument: "after", timestamps: true };
+    const options = { returnDocument: "after", timestamps: true };
 
-  const post = await PostModel.findByIdAndUpdate(
-    req.params.id,
-    updatePost,
-    options
-  );
-
-  res.send(post);
+    const post = await PostModel.findByIdAndUpdate(
+      req.params.id,
+      updatePost,
+      options
+    );
+    if (!post) {
+      res
+        .status(404)
+        .send({ message: "No post found matching the provided ID" });
+      return;
+    }
+    res.send(post);
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**
@@ -59,8 +72,16 @@ export const getPosts: RequestHandler = async (
   res,
   next
 ): Promise<IFetchedPosts | void> => {
-  const posts = await PostModel.find({});
-  res.json({ posts });
+  try {
+    const posts = await PostModel.find({});
+    if (posts.length === 0) {
+      res.status(404).send({ message: "No posts found" });
+      return;
+    }
+    res.json({ posts });
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**
@@ -68,9 +89,64 @@ export const getPosts: RequestHandler = async (
  *
  * @returns Posts object containing an array
  */
-export const getPublishedPosts: RequestHandler = async (req, res, next) => {
-  const posts = await PostModel.find({ published: true });
-  res.json({ posts });
+export const getPublishedPosts: RequestHandler = async (
+  req,
+  res,
+  next
+): Promise<IFetchedPosts | void> => {
+  try {
+    const posts = await PostModel.find({ published: true });
+    if (posts.length === 0) {
+      res.status(404).send({ message: "No published posts found" });
+      return;
+    }
+    res.json({ posts });
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ *  Get the posts of an author providing the authors name,
+ *  optionally the published status as a boolean or 0, 1
+ *
+ * @params :author
+ * @params :published? as boolean or 0, 1
+ * @returns object
+ */
+export const getPostsByAuthor: RequestHandler = async (
+  req,
+  res,
+  next
+): Promise<IFetchedPosts | void> => {
+  try {
+    const options: IPostOptional = {
+      author: req.params.author,
+    };
+
+    if (req.params.published) {
+      options.published =
+        req.params.published === "true" || +req.params.published === 1
+          ? true
+          : false;
+    }
+
+    const posts = await PostModel.find(options);
+
+    if (posts.length === 0) {
+      if (options.published) {
+        res
+          .status(404)
+          .send({ message: "No published posts found for this Author" });
+        return;
+      }
+      res.status(404).send({ message: "No posts found for this Author" });
+      return;
+    }
+    res.json({ posts });
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**
@@ -84,9 +160,16 @@ export const deletePostId: RequestHandler = async (
   res,
   next
 ): Promise<IPost | void> => {
-  const deletePost = await PostModel.findByIdAndDelete(req.params.id);
-
-  res.send(deletePost);
+  try {
+    const deletePost = await PostModel.findByIdAndDelete(req.params.id);
+    if (!deletePost) {
+      res.status(404).send({ message: "No post found with the provided ID" });
+      return;
+    }
+    res.send(deletePost);
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**
@@ -99,7 +182,13 @@ export const deleteAllPosts: RequestHandler = async (
   res,
   next
 ): Promise<IDeletedPost | void> => {
-  const posts = await PostModel.deleteMany({});
-
-  res.json({ posts });
+  try {
+    const posts = await PostModel.deleteMany({});
+    if (!posts) {
+      res.status(404).send({ message: "No post found with the provided ID" });
+    }
+    res.json({ posts });
+  } catch (error) {
+    next(error);
+  }
 };
