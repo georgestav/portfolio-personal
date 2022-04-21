@@ -23,3 +23,5 @@ try {
 } catch (error) {
   console.error("Unable to connect to db", error);
 }
+
+export default app; //for testing
