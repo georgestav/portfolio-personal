@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { IPost } from '../types/interfaces';
+import { IPost } from '../@types/interfaces';
 
 const { Schema } = mongoose;
 

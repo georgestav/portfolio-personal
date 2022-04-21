@@ -1,7 +1,7 @@
 import { RequestHandler } from 'express';
 
+import { IDeletedPost, IFetchedPosts, IPost, IPostOptional } from '../../@types/interfaces';
 import { PostModel } from '../../models/Post';
-import { IDeletedPost, IFetchedPosts, IPost, IPostOptional } from '../../types/interfaces';
 
 /**
  * Create a post

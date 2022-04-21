@@ -4,11 +4,13 @@ import mongoose from 'mongoose';
 
 import postsRoutes from './routes/api/posts';
 import statusRoutes from './routes/api/status';
+import userRoutes from './routes/api/users';
 
 const app = express();
 app.use(json());
 
 app.use("/api/posts", postsRoutes);
+app.use("/api/users", userRoutes);
 app.use("/api", statusRoutes);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
