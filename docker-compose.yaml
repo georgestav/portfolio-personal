@@ -20,5 +20,16 @@ services:
       - 3001:3001
     depends_on:
       - database
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client/src:/app/src
+      - /app/node_modules
+    depends_on:
+      - server
+    stdin_open: true
+    tty: true
 volumes:
   data_portfolio:
