@@ -1,6 +1,6 @@
 import { RequestHandler } from 'express';
 
-import { IDeletedPost, IFetchedPosts, IPost, IPostOptional } from '../../@types/interfaces';
+import { IDeletedPost, IFetchedPosts, IPost, IPostOptional } from '../../@types/PostTypes';
 import { PostModel } from '../../models/Post';
 
 /**

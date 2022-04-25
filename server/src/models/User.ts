@@ -1,8 +1,10 @@
 import mongoose from 'mongoose';
 
+import { IUser } from '../@types/UserTypes';
+
 const { Schema } = mongoose;
 
-const User = new Schema(
+const User = new Schema<IUser>(
   {
     username: { type: String, required: true },
     firstName: { type: String, required: true },
