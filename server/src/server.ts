@@ -1,4 +1,4 @@
-import { json } from 'body-parser';
+import bodyParser from 'body-parser';
 import express, { NextFunction, Request, Response } from 'express';
 import mongoose from 'mongoose';
 
@@ -7,7 +7,10 @@ import statusRoutes from './routes/api/status';
 import userRoutes from './routes/api/users';
 
 const app = express();
-app.use(json());
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 
 app.use("/api/posts", postsRoutes);
 app.use("/api/users", userRoutes);
