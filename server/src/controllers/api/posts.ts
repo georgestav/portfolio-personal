@@ -185,7 +185,7 @@ export const deleteAllPosts: RequestHandler = async (
   try {
     const posts = await PostModel.deleteMany({});
     if (!posts) {
-      res.status(404).send({ message: "No post found with the provided ID" });
+      res.status(404).send({ message: "No posts found to delete" });
     }
     res.json({ posts });
   } catch (error) {

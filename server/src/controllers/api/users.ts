@@ -1,7 +1,7 @@
 import bcrypt from 'bcryptjs';
 import { RequestHandler } from 'express';
 
-import { IUser, IUserResponse } from '../../@types/UserTypes';
+import { IDeletedUser, IUser, IUserResponse } from '../../@types/UserTypes';
 import { UserModel } from '../../models/User';
 
 /**
@@ -25,7 +25,6 @@ export const getAllUsers: RequestHandler = async (
       return;
     }
     const response = users.map((user) => {
-      console.log(user);
       return {
         username: user.username,
         role: user.role,
@@ -105,6 +104,43 @@ export const deleteUserById: RequestHandler = async (
       message: "deleted",
     };
     res.send(successResponse);
+  } catch (error) {
+    next(error);
+  }
+};
+
+/**
+ * Delete all users with role 2
+ *
+ * @param req
+ * @param res
+ * @param next
+ * @returns object
+ */
+export const deleteAllUsers: RequestHandler = async (
+  req,
+  res,
+  next
+): Promise<IDeletedUser | void> => {
+  try {
+    const deleteUsers = await UserModel.deleteMany({ role: 2 });
+    console.log(deleteUsers);
+    if (!deleteUsers) {
+      res.status(404).send({ message: "No posts found to delete" });
+    }
+    res.send(deleteUsers);
+  } catch (error) {
+    next(error);
+  }
+};
+
+export const updateUserId: RequestHandler = async (
+  req,
+  res,
+  next
+): Promise<IUser | void> => {
+  try {
+    res.send({ message: "to do" });
   } catch (error) {
     next(error);
   }

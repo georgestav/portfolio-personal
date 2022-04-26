@@ -1,3 +1,5 @@
+import { IResponseDeletedItem } from './GeneralTypes';
+
 export interface IPost {
   title: string;
   author: string;
@@ -24,9 +26,4 @@ export interface IFetchedPosts extends IPost {
   posts: IPost[];
 }
 
-export interface IDeletedPost extends IPost {
-  posts: {
-    acknowledged: boolean;
-    deletedCount: number;
-  };
-}
+export interface IDeletedPost extends IPost, IResponseDeletedItem {}
